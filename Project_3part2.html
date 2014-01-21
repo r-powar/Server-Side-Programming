@@ -1,0 +1,255 @@
+<!-- Raj Powar CS174 Project 3 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> My Basic HTML and CSS Page </title>
+	<style type = "text/css">
+
+	#header
+	{
+		background-image: url("header.jpg");
+		position: relative;
+		width: 1020px ;
+		height: 130px;
+		top: -10px;
+		left: 0px;
+
+	}
+
+	
+	#title
+	{
+		position: absolute;
+		left: 10px;
+		top: 30px;
+		font-size:30px;
+		color:white;
+		float: left;
+		font-family: Helvetica,sans-serif;
+
+	}
+
+	#header li
+	{
+		display:inline;		
+		font-size: 20px;
+		position: relative;
+		color: white;
+		left: -25px;
+		top: 60px;
+		margin: 0 20px 20px 0;
+		font-family: Helvetica, sans-serif;
+
+
+
+	}
+
+	
+	#mainbox
+	{
+		width:800px;
+		border: 1px solid black;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#center
+	{
+		width:800px;
+		border: 1px solid black;
+		/*border-left: 160px solid #DCDCDC;
+		border-right: 150px solid  #DCDCDC;*/
+		/*border-top: 10px solid gray;*/
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -8px;
+		overflow:hidden;
+		height:500px;
+	}
+
+	body{
+		height: 750px;
+		background-color: #DCDCDC;
+	}
+
+	div
+	{
+		background-color: white;
+	}
+
+	#content 
+	{
+		border: 1px solid black;
+		padding: 10px;
+		height: 250px;
+		width: 276px;
+		margin: -9px 0px;
+
+
+		position: static; /*For positioning look at notes*/
+		left: 90px;
+		top: 180px;
+		float: left; /*Takes it as far to the left*/
+
+
+	}
+
+	#content2 
+	{
+		border: 1px solid black;
+		padding: 16px;
+		height: 235px;
+		width: 467px;
+		margin: -9px 0px;
+
+
+		/*position: static;*/
+		
+		float: right; /*Takes it as far to the right*/
+
+	}
+
+	#empty
+	{
+		height: 320px;
+
+	}
+
+	#footer
+	{
+		width:780px;
+		float:left;
+		padding: 20px 0px 0px 10px;
+		margin: 10px 	;
+	}
+
+	li:hover{
+		color:#FFFFFF;
+	}
+
+	#content li
+	{
+		background-color: #abcdef;
+		margin-top: 2px;
+		padding-left: 22px;
+	}
+
+	#popup1
+	{
+		display: none;
+		border: 1px solid black;
+		background-color: #abcdef;
+		width: 290px;
+		height: 175px;
+
+	}
+
+	#popup2
+	{
+		display: none;
+		border: 1px solid black;
+		background-color: #abcdef;
+		width: 290px;
+		height: 175px;
+
+	}
+
+	#popup3
+	{
+		display: none;
+		border: 1px solid black;
+		background-color: #abcdef;
+		width: 290px;
+		height: 175px;
+
+	}
+
+
+
+	#header li:hover + #popup1
+	{
+		display:inline;
+		position: absolute;
+		z-index: 1;
+		top:90px;
+
+	}
+
+	#header li:hover + #popup2
+	{
+		display:inline;
+		position: absolute;
+		z-index: 1;
+		top:90px;
+
+	}
+
+	#header li:hover + #popup3
+	{
+		display:inline;
+		position: absolute;
+		z-index: 1;
+		top:90px;
+
+	}
+
+
+	</style> 
+</head>
+<body>
+	
+	<div id= "center">
+		<div id = "header" >
+			<span id = "title"> The Name of the Website</span> <br>
+
+			<ul>
+				<li> MenuItem 1 </li>
+				<div id="popup1" ><p>
+					Here you can learn all about menu item 1. Do you even know what menu item1 is about? If not, then this is the place to go. It has everything you need. Cancer? Cured. Bills? Paid. Homeless?Shelter. Bam!
+				</p></div>
+				<li> MenuItem 2 </li>
+				<div id="popup2" ><p>
+					Here you can learn all about menu item 1. Do you even know what menu item1 is about? If not, then this is the place to go. It has everything you need. Cancer? Cured. Bills? Paid. Homeless?Shelter. Bam!
+				</p></div>
+				<li> MenuItem 3 </li>
+				<div id="popup3"><p>
+					Here you can learn all about menu item 1. Do you even know what menu item1 is about? If not, then this is the place to go. It has everything you need. Cancer? Cured. Bills? Paid. Homeless?Shelter. Bam!
+				</p></div>
+			</ul>
+		</div> 
+
+		<div id= "content">
+			<p>
+				Here's some menu navigation!
+				<ul>
+					<li>Home</li>
+					<li>Better Content</li>
+					<li>Best Content</li>
+					<li>Login</li>
+				</ul>
+
+				On a blog, a google advertisement might go here but on a business site this is usually filled with company news, important announcements, or something else
+			</p>
+		</div>
+		<div id = "content2">
+
+			<h2>Title of This Content Page</h2>
+			This is a basic html and css webpage. <br/><br/>
+			This page primarily demonstrates the various ways of positioning and sizing html elements using css. <br/>
+			<br/>
+			Blah blah blah blah<br/><br/>
+			This is more commentary on the video from above. Something about the lighting, the symbolism of the gun rack, and the brilliant acting of Mike Myers, the greatest actor of all time. 
+
+
+			
+		</div>
+		<div id="footer"><p>
+			This is the content that would go in the footer. Probably another menu, with legal notices, ways to contact the company, and anything else that might be appropriate.
+		</p></div>
+
+	</div>
+	
+</body>
+</html>
