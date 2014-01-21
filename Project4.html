@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title> JS </title> 
+	<style type="text/css">
+	#toggleStyle
+	{
+		height: 100px;
+		width: 100px;
+		background-color: #d32d45;
+	}
+	</style>
+
+	<script type = "text/Javascript">
+
+	function toggle()
+	{
+		var val = document.getElementById("toggleText");
+		if (val.innerHTML == "help"){
+			val.innerHTML = "me";
+		}else{
+			val.innerHTML = "help";
+		}
+	}
+
+	function random()
+	{
+		alert(Math.random());
+
+	}
+
+	function image()
+	{
+		var imgs = document.getElementById("toggleimg");
+		if (imgs.src == "http://i.imgur.com/9vycBMH.jpg"){
+			imgs.src = "http://i.imgur.com/2vOPPPM.jpg";}
+		else
+			{imgs.src = "http://i.imgur.com/9vycBMH.jpg";
+	}
+
+		// http://i.imgur.com/9vycBMH.jpg
+		// http://i.imgur.com/2vOPPPM.jpg
+
+	}
+
+
+
+	 </script>
+
+</head>
+
+<body>
+	
+	<div id="toggleStyle" onClick = "toggle()">
+		Click on this  
+		<p id = "toggleText">help<p>
+	</div>
+	<br/>
+	<a href onClick = "random()"> Click on this link for a random number </a>
+	<br/>
+
+	<div> <img src = "http://i.imgur.com/9vycBMH.jpg" onClick = "image()" id="toggleimg">
+	</div>
+
+</body>
+
+</html>

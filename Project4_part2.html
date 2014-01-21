@@ -1,0 +1,148 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+	<title>Registration Form</title>
+	<style type="text/css">
+
+	.ErrorMessage{
+		display: inline;
+		color: orange;
+		width: 100px;
+		height: 20px;
+	}
+
+	#NameError{
+		display: none;
+		color: red;
+	}
+
+	#NumberError{
+		display: none;
+		color: red;
+	}
+
+	#PasswordError{
+		display: none;
+		color: red;
+	}
+
+	
+
+	
+	</style>
+	<script>
+
+	var counter = 0;
+
+	function validatetxtuserName(usrname){
+	
+		if (!usrname) {
+			
+			if (counter == 0){
+				document.getElementById("txtuserName").focus();  
+			}
+			document.getElementById("NameError").style.display = "inline"; 
+			document.getElementById("ErrorMessage1").innerHTML =  "This is inccorrect format txtuserName, please try again";
+			counter++;
+			return false;
+		}else{
+			document.getElementById("NameError").style.display = "none";
+			document.getElementById("ErrorMessage1").innerHTML = "";
+			
+			return true;
+		}
+	}
+
+	function validatetxtphoneNumber(phnNumber){
+	
+		if (!phnNumber) { 
+		 
+			if (counter == 0){
+				document.getElementById("txtphoneNumber").focus(); 
+			}
+			document.getElementById("NumberError").style.display = "inline";
+			document.getElementById("ErrorMessage2").innerHTML = "This is inccorrect format number, please try again";  
+			
+			counter++;
+			return false;
+		}
+		else{	
+			document.getElementById("NumberError").style.display = "none";
+			document.getElementById("ErrorMessage2").innerHTML = "";
+			
+			return true;
+		}
+	}
+
+	function validatetxtpassword(psswrd){
+		
+		if (!psswrd) {
+
+			if (counter == 0){
+				document.getElementById("txtpassword").focus(); 
+			}
+			document.getElementById("PasswordError").style.display = "inline";
+			document.getElementById("ErrorMessage3").innerHTML = "This is inccorrect format txtpassword, please try again"; 
+			counter++;
+			return false;
+		}else{
+			
+			document.getElementById("PasswordError").style.display = "none";
+			document.getElementById("ErrorMessage3").innerHTML = "";
+			
+			return true;
+		}
+	}
+
+
+	function ValidateForm(){
+		var ErrorMessage = " "; 
+
+		
+		var txtuserName = document.getElementById("txtuserName").value;
+		var txtphoneNumber = document.getElementById("txtphoneNumber").value;
+		var txtpassword = document.getElementById("txtpassword").value;
+
+		
+		var txtuserNameRegEx = /^[A-Za-z]+$/;
+		var usrname = txtuserNameRegEx.exec(txtuserName);
+
+		var txtphoneNumberRegEx = /^\(\d{3}-\s?\d{3}-\d{4}\)$/;
+		var txtphoneNumber = txtphoneNumberRegEx.exec(txtphoneNumber);
+
+		var txtpasswordRegEx = /^(?=.{8})(?=.*[0-9])/;
+		var txtpassword = txtpasswordRegEx.exec(txtpassword);
+
+		counter = 0;
+		
+		validatetxtuserName(usrname);
+		validatetxtphoneNumber(txtphoneNumber);
+		validatetxtpassword(txtpassword);
+
+
+		return false;
+
+	}
+	</script>
+</head>
+
+<body>
+	<div>
+		<div class = "ErrorMessage" id ="ErrorMessage1"></div>
+		<div class = "ErrorMessage" id="ErrorMessage2"></div>
+		<div class = "ErrorMessage" id="ErrorMessage3"></div>
+		<form action="" method="POST" onSubmit= "return ValidateForm();">
+			
+				<p><label for="txtuserName">User Name:</label> <input type="text" name="txtuserName" id="txtuserName"/><span id="NameError">*</span></p>
+				<p><label for="firstName">First Name:</label> <input type="text" name="firstName" id="firstName"/></p>
+				<p><label for="lastName">Last Name:</label> <input type="text" name="lastName" id="lastName" /></p>
+				<p><label for="txtphoneNumber">Phone Number:</label> <input type="text" name="txtphoneNumber" id="txtphoneNumber"/><span id="NumberError">*</span></p>
+				<p><label for="txtpassword">Password:</label> <input type="txtpassword" name="txtpassword" id="txtpassword" /><span id="PasswordError">*</span></p>
+				<input type = "submit" value="Submit"><br/>
+			
+		</form>
+		<div>
+		</body>
+
+		</html>
